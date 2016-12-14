@@ -1,22 +1,37 @@
 {
-  "name": "plataforma-proyecto",
-  "version": "1.0.0",
-  "description": "Plataforma para proyecto de TIO",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Grupo-3-TIO/plataforma-proyecto.git"
-  },
-  "author": "Yo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Grupo-3-TIO/plataforma-proyecto/issues"
-  },
-  "homepage": "https://github.com/Grupo-3-TIO/plataforma-proyecto#readme",
-  "dependencies": {
-    "chart.js": "^2.4.0"
-  }
+    "name": "plataforma-proyecto",
+    "version": "1.0.0",
+    "description": "Plataforma para proyecto de TIO",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Grupo-3-TIO/plataforma-proyecto.git"
+    },
+    "contributors": [{
+        "name": "Aitor Bernal Falcon"
+    }, {
+        "name": "Samuel Ramos Barroso"
+    }, {
+        "name": "Joshua Perez Garcia"
+    }, {
+        "name": "Alejandro Arzola García"
+    }, {
+        "name": "Samuel Valcárcel Arce"
+    }, {
+        "name": "Carlos de Armas Hernández"
+    }],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Grupo-3-TIO/plataforma-proyecto/issues"
+    },
+    "homepage": "https://github.com/Grupo-3-TIO/plataforma-proyecto#readme",
+    "dependencies": {
+        "chart.js": "^2.4.0",
+        "ejs": "^2.5.5",
+        "express": "^4.14.0"
+    }
 }
