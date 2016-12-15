@@ -7,7 +7,7 @@ $("#boton").click( function() {
    $.get("/buscar",{}, function (data) {
 
      console.log(data);
-
+     
    });
 });
 

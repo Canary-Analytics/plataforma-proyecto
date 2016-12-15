@@ -1,4 +1,4 @@
-# plataforma-proyecto
+# Plataforma para el proyecto de Tecnologías de la información para las Organizaciones.
 
 ## La plataforma muestra:
 
