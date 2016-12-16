@@ -107,7 +107,6 @@
 
                 <div class="row">
 
-
                     <div class="col-md-9 col-sm-12 col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -133,47 +132,7 @@
                 <!-- /. ROW  -->
 
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Tasks Panel
-                            </div>
-                            <div class="panel-body">
-                                <div class="list-group">
-
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">7 minutes ago</span>
-                                        <i class="fa fa-fw fa-comment"></i> Commented on a post
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">16 minutes ago</span>
-                                        <i class="fa fa-fw fa-truck"></i> Order 392 shipped
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">36 minutes ago</span>
-                                        <i class="fa fa-fw fa-globe"></i> Invoice 653 has paid
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">1 hour ago</span>
-                                        <i class="fa fa-fw fa-user"></i> A new user has been added
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">1.23 hour ago</span>
-                                        <i class="fa fa-fw fa-user"></i> A new user has added
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">yesterday</span>
-                                        <i class="fa fa-fw fa-globe"></i> Saved the world
-                                    </a>
-                                </div>
-                                <div class="text-right">
-                                    <a href="#">More Tasks <i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="col-md-6">
 
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -181,18 +140,21 @@
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-bordered table-hover">
+                                    <table width="200px" class="table table-striped table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Foto de perfil</th>
+                                                <th width ="50px">Foto</th>
                                                 <th>Nombre de usuario</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+
                                             <% for (let i = 0; i < url.length; i++) {  %>
                                                 <tr>
                                                     <td>
-                                                        <%= url[i] %>
+                                                      <p align="center">
+                                                        <img src= <%= ""+ url[i] + "" %> alt="">
+                                                      </p>
                                                     </td>
                                                     <td>
                                                         <%= nombre[i] %>
@@ -202,10 +164,47 @@
                                         </tbody>
                                     </table>
                                 </div>
+
                             </div>
                         </div>
 
                     </div>
+                    <div class="col-md-6">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              Últimos Tweets
+                          </div>
+                          <div class="panel-body">
+                              <div class="table-responsive">
+                                  <table width="200px" class="table table-striped table-bordered table-hover">
+                                      <thead>
+                                          <tr>
+                                              <th width ="50px">Foto</th>
+                                              <th>Nombre de usuario</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+
+                                          <% for (let i = 0; i < url.length; i++) {  %>
+                                              <tr>
+                                                  <td>
+                                                    <p align="center">
+                                                      <img src= <%= ""+ url2[i] + "" %> alt="">
+                                                    </p>
+                                                  </td>
+                                                  <td>
+                                                      <%= nombre2[i] %>
+                                                  </td>
+                                              </tr>
+                                          <% } %>
+                                      </tbody>
+                                  </table>
+                              </div>
+
+                          </div>
+                      </div>
+                    </div>
+
                 </div>
                 <!-- /. ROW  -->
                 <footer>

@@ -14,23 +14,39 @@ exports.mediaFollowers = () => {
 
 exports.influyentes = () => {
 
-  let vector = [0,0,0,0,0,0,0,0,0,0];
-  let imgs = ["","","","","","","","","",""];
-  let names = ["","","","","","","","","",""];
-  let min;
+    let vector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    let imgs = ["", "", "", "", "", "", "", "", "", ""];
+    let names = ["", "", "", "", "", "", "", "", "", ""];
+    let min;
 
-  for (let i = 0; i < salida.length; i++) {
-      min = Math.min(...vector);
-      if(salida[i].Retweets > min) {
-        let pos = getPos(vector,min);
-        vector[pos] = salida[i].Retweets;
-        imgs[pos] = salida[i].ProfileImagen;
-        names[pos] = salida[i].ScreenName;
-      }
-  }
-  let vectorVectores = [names,imgs];
-  console.log(vectorVectores)
-  return vectorVectores;
+    for (let i = 0; i < salida.length; i++) {
+        min = Math.min(...vector);
+        if (salida[i].Retweets > min) {
+            let pos = getPos(vector, min);
+            vector[pos] = salida[i].Retweets;
+            imgs[pos] = salida[i].ProfileImagen;
+            names[pos] = salida[i].ScreenName;
+        }
+    }
+    let vectorVectores = [names, imgs];
+    return vectorVectores;
+}
+
+exports.ultimosTweets = () => {
+
+    let imgs = ["", "", "", "", "", "", "", "", "", ""];
+    let names = ["", "", "", "", "", "", "", "", "", ""];
+    let pos = 0;
+
+    for (let i = 0; i < salida.length; i++) {
+        if (i >= (salida.length - 11)) {
+            imgs[pos] = salida[i].ProfileImagen;
+            names[pos] = salida[i].ScreenName;
+            pos++;
+        }
+    }
+    let vectorVectores = [names,imgs];
+    return vectorVectores;
 }
 
 function getFollowers() {
@@ -41,10 +57,10 @@ function getFollowers() {
     return contador;
 }
 
-function getPos(vector,x) {
-  for (let i = 0; i < vector.length; i++) {
-    if(vector[i] ==  x) {
-      return i;
+function getPos(vector, x) {
+    for (let i = 0; i < vector.length; i++) {
+        if (vector[i] == x) {
+            return i;
+        }
     }
-  }
 }

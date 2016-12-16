@@ -5,10 +5,11 @@ const app = express();
 const path = require('path');
 const db = require('./db/index');
 
-db.numeroTotal();
-db.followers();
-console.log(db.mediaFollowers());
+const total = db.numeroTotal();
+const follows = db.followers();
+const mFollows= db.mediaFollowers();
 const inf = db.influyentes();
+const ultimosTweets = db.ultimosTweets();
 
 app.set('port', (process.env.PORT || 8080));
 app.set('views', path.join(__dirname, 'views'));
@@ -26,11 +27,13 @@ app.get('/buscar', (request, response) => {
 
 app.get('/datos', (request, response) => {
     response.render('datos', {
-        nTweets: db.numeroTotal(),
-        nFollowers: db.followers(),
-        media: db.mediaFollowers(),
+        nTweets: total,
+        nFollowers: follows,
+        media: mFollows,
         nombre: inf[0],
-        url: inf[1]
+        url: inf[1],
+        nombre2: ultimosTweets[0],
+        url2: ultimosTweets[1]
     });
 });
 
