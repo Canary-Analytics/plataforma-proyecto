@@ -8,6 +8,7 @@ const db = require('./db/index');
 db.numeroTotal();
 db.followers();
 console.log(db.mediaFollowers());
+const inf = db.influyentes();
 
 app.set('port', (process.env.PORT || 8080));
 app.set('views', path.join(__dirname, 'views'));
@@ -27,7 +28,9 @@ app.get('/datos', (request, response) => {
     response.render('datos', {
         nTweets: db.numeroTotal(),
         nFollowers: db.followers(),
-        media: db.mediaFollowers()
+        media: db.mediaFollowers(),
+        nombre: inf[0],
+        url: inf[1]
     });
 });
 
