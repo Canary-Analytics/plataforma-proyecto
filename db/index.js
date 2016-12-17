@@ -69,14 +69,40 @@ function include(arr,obj) {
   return (arr.indexOf(obj) != -1);
 }
 
-function getDevices() {
-    let devices = [];
-    for (let i = 0; i < salida.length; i++) {
-      if(!devices.find())
-      {
-        devices.push(salida[i].App);
-      }
+function isNotInDevices(dev, devs)
+{
+  let isindevices;
+
+  console.log("Funcion: ",dev, devs)
+  for (var i = 0; i <= devs.length; i++)
+  {
+    if (dev = devs[i])
+    {
+        console.log("false")
+        isindevices = false
+    }
+    else {
+        isindevices = true;
+        console.log("true")
+    }
   }
+  return isindevices;
+}
+
+function getDevices()
+{
+    let devices = [];
+    let device;
+    for (let i = 0; i < 10; i++)
+    {
+      device = salida[i].App
+      console.log("Dispositivo: ",device)
+      if(isNotInDevices(device, devices))
+      {
+        devices.push(device);
+        console.log("Introduciendo ", device)
+      }
+    }
   console.log(devices);
 }
 
