@@ -103,3 +103,17 @@ exports.countDevices = () => {
     let devicescounter = [devices, cnt]
     return devicescounter;
 }
+
+exports.getTweetInfo = () => {
+    let option = ["Tweets", "Rt", "Favs"];
+    let cnt = [0, 0, 0];
+
+    cnt[0] = salida.length
+    for (var i = 0; i < salida.length; i++) {
+        cnt[1] += salida[i].Retweets;
+        cnt[2] += salida[i].Favorites;
+    }
+
+    let infoTweets = [option, cnt]
+    return infoTweets;
+}
