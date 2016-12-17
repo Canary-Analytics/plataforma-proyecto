@@ -24,7 +24,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/buscar', (request, response) => {
-    response.json("[2, 1, 3, 4, 5]");
+    response.json(countDevices);
 });
 
 app.get('/datos', (request, response) => {

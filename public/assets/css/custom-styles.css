@@ -17,6 +17,12 @@ body {
     width: 100%;
 }
 
+#dispchart {
+    width: 500px;
+    height: 500px;
+    margin: 0px auto;
+}
+
 #imglogo {
     width: 50%;
     height: 50%;

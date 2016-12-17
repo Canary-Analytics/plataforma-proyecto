@@ -3,29 +3,31 @@ google.charts.load("current", {
 });
 google.charts.setOnLoadCallback(drawChart);
 
-$("#boton").click( function() {
-   $.get("/buscar",{}, function (data) {
+let disp;
 
-     console.log(data);
-     
-   });
+$(document).ready(() => {
+    $.get("/buscar", {}, (data) => {
+      disp = data;
+    });
 });
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work', datos[0]],
-        ['Eat', datos[1]],
-        ['Commute', datos[2]],
-        ['Watch TV', datos[3]],
-        ['Sleep', datos[4]]
+        ['Dispositivos', 'Numero de usuarios'],
+        [disp[0][0], disp[1][0]],
+        [disp[0][1], disp[1][1]],
+        [disp[0][2], disp[1][2]],
+        [disp[0][3], disp[1][2]],
+        [disp[0][4], disp[1][4]],
+        [disp[0][5], disp[1][5]],
+        [disp[0][6], disp[1][6]],
     ]);
 
     var options = {
-        title: 'My Daily Activities',
+        title: 'Dispositivos más usados',
         pieHole: 0.4,
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    var chart = new google.visualization.PieChart(document.getElementById('dispchart'));
     chart.draw(data, options);
 }
