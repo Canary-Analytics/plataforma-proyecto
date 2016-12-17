@@ -100,7 +100,7 @@ exports.countDevices = () => {
         else cnt[6]++;
     }
 
-    let devicescounter = [devices, cnt]
+    let devicescounter = [devices, cnt];
     return devicescounter;
 }
 
@@ -114,6 +114,6 @@ exports.getTweetInfo = () => {
         cnt[2] += salida[i].Favorites;
     }
 
-    let infoTweets = [option, cnt]
+    let infoTweets = [option, cnt];
     return infoTweets;
 }
