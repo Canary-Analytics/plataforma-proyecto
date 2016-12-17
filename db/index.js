@@ -64,3 +64,20 @@ function getPos(vector, x) {
         }
     }
 }
+
+function include(arr,obj) {
+  return (arr.indexOf(obj) != -1);
+}
+
+function getDevices() {
+    let devices = [];
+    for (let i = 0; i < salida.length; i++) {
+      if(!devices.find())
+      {
+        devices.push(salida[i].App);
+      }
+  }
+  console.log(devices);
+}
+
+getDevices();
