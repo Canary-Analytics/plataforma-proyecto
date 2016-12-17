@@ -10,6 +10,7 @@ const follows = db.followers();
 const mFollows= db.mediaFollowers();
 const inf = db.influyentes();
 const ultimosTweets = db.ultimosTweets();
+const countDevices = db.countDevices();
 
 app.set('port', (process.env.PORT || 8080));
 app.set('views', path.join(__dirname, 'views'));

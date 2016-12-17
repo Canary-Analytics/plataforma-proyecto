@@ -45,7 +45,7 @@ exports.ultimosTweets = () => {
             pos++;
         }
     }
-    let vectorVectores = [names,imgs];
+    let vectorVectores = [names, imgs];
     return vectorVectores;
 }
 
@@ -65,45 +65,41 @@ function getPos(vector, x) {
     }
 }
 
-function include(arr,obj) {
-  return (arr.indexOf(obj) != -1);
+function include(arr, obj) {
+    return (arr.indexOf(obj) != -1);
 }
 
-function isNotInDevices(dev, devs)
-{
-  let isindevices;
-
-  console.log("Funcion: ",dev, devs)
-  for (var i = 0; i <= devs.length; i++)
-  {
-    if (dev = devs[i])
-    {
-        console.log("false")
-        isindevices = false
+function isInDevices(dev, devs) {
+    for (let i = 0; i < devs.length; i++) {
+        if (dev == devs[i]) return true;
     }
-    else {
-        isindevices = true;
-        console.log("true")
-    }
-  }
-  return isindevices;
+    return false;
 }
 
-function getDevices()
-{
+function getDevices() {
     let devices = [];
     let device;
-    for (let i = 0; i < 10; i++)
-    {
-      device = salida[i].App
-      console.log("Dispositivo: ",device)
-      if(isNotInDevices(device, devices))
-      {
-        devices.push(device);
-        console.log("Introduciendo ", device)
-      }
+    for (let i = 0; i < salida.length; i++) {
+        device = salida[i].App
+        if (!isInDevices(device, devices)) devices.push(device);
     }
-  console.log(devices);
 }
 
-getDevices();
+exports.countDevices = () => {
+
+    let devices = ["Windows", "iOS", "Android", "Instagram", "Facebook", "TweetDeck", "Otros"];
+    let cnt = [0, 0, 0, 0, 0, 0, 0];
+
+    for (let i = 0; i < salida.length; i++) {
+        if ((salida[i].App == "twitter for windows phone") || (salida[i].App == "twitter for windows")) cnt[0]++;
+        else if ((salida[i].App == "twitter for ipad") || (salida[i].App == "twitter for iphone") || (salida[i].App == "twitter for mac")) cnt[1]++;
+        else if (salida[i].App == "twitter for android") cnt[2]++;
+        else if (salida[i].App == "instagram") cnt[3]++;
+        else if (salida[i].App == "facebook") cnt[4]++;
+        else if (salida[i].App == "tweetdeck") cnt[5]++;
+        else cnt[6]++;
+    }
+
+    let devicescounter = [devices, cnt]
+    return devicescounter;
+}
