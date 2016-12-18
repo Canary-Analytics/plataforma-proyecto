@@ -13,14 +13,13 @@
 
 * Una gráfica de dispositivos
 * Gráfica de RT vs Tweets originales vs favs
-* Gráfica de localización
 
 ### Usuarios
 
 * Diez últimos usuarios que han twitteado
 * Los diez usuarios más influyentes
 
-### Mapas
+### Mapas hechos con CartoDB
 
-* Mapa de distribución de la localización
-* Opcional: geolocalización mediante Carto
+* Mapa de geolocalización
+* Mapa de calor (Las zonas donde más se twittea)
