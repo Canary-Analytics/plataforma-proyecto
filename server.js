@@ -23,8 +23,12 @@ app.get('/', (request, response) => {
     response.render('index');
 });
 
-app.get('/buscar', (request, response) => {
+app.get('/dispositivos', (request, response) => {
     response.json(countDevices);
+});
+
+app.get('/tweets', (request, response) => {
+    response.json(infoTweets);
 });
 
 app.get('/datos', (request, response) => {
