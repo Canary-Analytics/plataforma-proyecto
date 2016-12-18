@@ -16,6 +16,26 @@ $(document).ready(() => {
       tweets = data;
     });
 
+    $("#mapa").click(() => {
+      if($("#calor").hasClass("esconder")) {
+        $("#mapa").empty();
+        $("#mapa").append("Mapa de geolocalización");
+        $("#mapa").removeClass("btn-danger");
+        $("#mapa").addClass("btn-primary");
+        $("#calor").removeClass("esconder");
+        $("#puntos").addClass("esconder");
+      }
+      else {
+        $("#mapa").empty();
+        $("#mapa").append("Mapa de calor");
+        $("#mapa").removeClass("btn-primary");
+        $("#mapa").addClass("btn-danger");
+        $("#puntos").removeClass("esconder");
+        $("#calor").addClass("esconder");
+      }
+
+    })
+
 });
 
 
