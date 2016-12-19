@@ -29,6 +29,9 @@
         "url": "https://github.com/Grupo-3-TIO/plataforma-proyecto/issues"
     },
     "homepage": "https://github.com/Grupo-3-TIO/plataforma-proyecto#readme",
+    "engines": {
+        "node": "5.9.1"
+    },
     "dependencies": {
         "chart.js": "^2.4.0",
         "ejs": "^2.5.5",
