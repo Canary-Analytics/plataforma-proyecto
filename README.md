@@ -23,3 +23,5 @@
 
 * Mapa de geolocalización
 * Mapa de calor (Las zonas donde más se twittea)
+
+[Enlace a la plataforma](https://canary-analytics.herokuapp.com/datos)
